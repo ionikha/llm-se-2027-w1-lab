@@ -31,12 +31,12 @@ have different remedies.
 
 ### E1
 
-- **Date**:
-- **What happened**:
-- **Class**:
-- **Evidence** (session log timestamp, commit, or file:line):
-- **What I did about it**:
-- **Did it work?**:
+- **Date**: 2026-10-21
+- **What happened**: The agent twice used an invalid patch format, so the first edits were rejected before changing files.
+- **Class**: tool
+- **Evidence** (session log timestamp, commit, or file:line): Both initial `apply_patch` attempts returned an invalid-context error.
+- **What I did about it**: Reworked the patch to match the editor's patch format, then validated the resulting Python syntax.
+- **Did it work?**: Yes.
 
 ---
 
